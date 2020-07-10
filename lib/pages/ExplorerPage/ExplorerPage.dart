@@ -1,0 +1,56 @@
+
+import 'package:flutter/material.dart';
+import '../../common/GridPost/GridPost.dart';
+import '../../models/PostModel.dart';
+
+class ExplorerPage extends StatelessWidget {
+
+  final List<Post> _listExplorer = [
+    Post(
+      id: '2',
+      profilePicture:
+          'https://instagram.fbdo2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/53423900_311024582937195_4672797488879501312_n.jpg?_nc_ht=instagram.fbdo2-1.fna.fbcdn.net&_nc_ohc=PFVq7bhebO0AX-Tm4Jm&oh=c1b4b6f5b5f0000549c1b4b17efa8be4&oe=5F3000E0',
+      username: 'wekwekwek.id',
+      place: 'Jakarta',
+      image:
+          'https://instagram.fbdo2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/56291103_425695331569410_7421207288484871755_n.jpg?_nc_ht=instagram.fbdo2-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=CetTgIc_Q1cAX-P84Pb&oh=b8769e65f3d0e7ce10a79f8f2a4c015b&oe=5F315F0C',
+      description:
+          "Cats, also called domestic cats (Felis catus), are small, carnivorous (meat-eating) mammals, of the family Felidae. Domestic cats are often called house cats when kept as indoor pets. Cats have been domesticated (tamed) for nearly 10,000 years.",
+      likeCount: 100,
+      commentCount: 150),
+    Post(
+      id: '2',
+      profilePicture:
+          'https://instagram.fbdo2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/53423900_311024582937195_4672797488879501312_n.jpg?_nc_ht=instagram.fbdo2-1.fna.fbcdn.net&_nc_ohc=PFVq7bhebO0AX-Tm4Jm&oh=c1b4b6f5b5f0000549c1b4b17efa8be4&oe=5F3000E0',
+      username: 'wekwekwek.id',
+      place: 'Jakarta',
+      image:
+          'https://instagram.fbdo2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/56291103_425695331569410_7421207288484871755_n.jpg?_nc_ht=instagram.fbdo2-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=CetTgIc_Q1cAX-P84Pb&oh=b8769e65f3d0e7ce10a79f8f2a4c015b&oe=5F315F0C',
+      description:
+          "Cats, also called domestic cats (Felis catus), are small, carnivorous (meat-eating) mammals, of the family Felidae. Domestic cats are often called house cats when kept as indoor pets. Cats have been domesticated (tamed) for nearly 10,000 years.",
+      likeCount: 100,
+      commentCount: 150),
+    Post(
+      id: '2',
+      profilePicture:
+          'https://instagram.fbdo2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/53423900_311024582937195_4672797488879501312_n.jpg?_nc_ht=instagram.fbdo2-1.fna.fbcdn.net&_nc_ohc=PFVq7bhebO0AX-Tm4Jm&oh=c1b4b6f5b5f0000549c1b4b17efa8be4&oe=5F3000E0',
+      username: 'wekwekwek.id',
+      place: 'Jakarta',
+      image:
+          'https://instagram.fbdo2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/56291103_425695331569410_7421207288484871755_n.jpg?_nc_ht=instagram.fbdo2-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=CetTgIc_Q1cAX-P84Pb&oh=b8769e65f3d0e7ce10a79f8f2a4c015b&oe=5F315F0C',
+      description:
+          "Cats, also called domestic cats (Felis catus), are small, carnivorous (meat-eating) mammals, of the family Felidae. Domestic cats are often called house cats when kept as indoor pets. Cats have been domesticated (tamed) for nearly 10,000 years.",
+      likeCount: 100,
+      commentCount: 150),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final double heightPost = MediaQuery.of(context).size.height * 0.9;
+
+    return Container(
+      height: heightPost,
+      child: GridPost(_listExplorer),
+    );
+  }
+}

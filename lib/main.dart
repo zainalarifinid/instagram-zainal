@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram_zainal/pages/ExplorerPage/ExplorerPage.dart';
+import './pages/ProfilePage/ProfilePage.dart';
 import './widgets/feed/FeedWidget.dart';
 
 void main() {
@@ -72,15 +74,15 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
       ),
       body: PageView(children: <Widget>[
-        SingleChildScrollView(
-            child: Feed(),
-        ),
+        Feed(),
+        ExplorerPage(),
         Container(
           
         ),
         Container(
           
         ),
+        ProfilePage(),
       ],
       controller: _pageController,
       onPageChanged: onPageChanged,
@@ -98,7 +100,23 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              FontAwesomeIcons.compass,
+              FontAwesomeIcons.search,
+              size: 30,
+              color: Colors.black,
+            ),
+            title: Container(height: 0.0,)
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FontAwesomeIcons.plusSquare,
+              size: 30,
+              color: Colors.black,
+            ),
+            title: Container(height: 0.0,)
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FontAwesomeIcons.heart,
               size: 30,
               color: Colors.black,
             ),

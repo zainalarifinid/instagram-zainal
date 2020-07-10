@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_zainal/models/PostModel.dart';
-import 'package:instagram_zainal/widgets/post/PostWidget.dart';
+import 'package:instagram_zainal/common/CardPost/CardPost.dart';
 
 class Feed extends StatefulWidget {
   @override
@@ -38,7 +38,7 @@ class _FeedState extends State<Feed> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: PostWidget(_postFeed)
+      child: CardPost(_postFeed)
     );
   }
 }
